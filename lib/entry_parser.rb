@@ -14,11 +14,6 @@ class EntryParser
     comments = metadata.css('a').at('a:contains("comments")')
     comments = comments.nil? ? 0 : comments.children.text.chomp(' comments').to_i
 
-    # TODO: refactor this, keep for now for testing purposes
-    entry = Entry.new(id, rank, title, score, comments)
-
-    puts entry.title
-
-    entry
+    Entry.new(id, rank, title, score, comments)
   end
 end
