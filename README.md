@@ -29,8 +29,18 @@ ruby main.rb
 
 ## 🧪 Running Tests
 
+The project uses Minitest for testing.
+
+1. You can run all tests using Rake:
+
 ```bash
-bundle exec ruby test/test_hacker_news_scraper.rb
+bundle exec rake test
+```
+
+2. You can run a specific test file:
+
+```bash
+bundle exec ruby test/scraper_test.rb
 ```
 
 ## 💭 Why I Built It This Way
@@ -45,6 +55,7 @@ I decided to build this project just in Ruby because it's the language I enjoy t
 - `nokogiri` to handle all the HTML parsing
 - `json` for handling the data storage (keeping it simple with the standard library)
 - `minitest` and `mocha` for unit testing
+- `rake` for task automation
 
 ### Testing Strategy
 
