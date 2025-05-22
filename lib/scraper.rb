@@ -16,6 +16,8 @@ class Scraper
       [submission, metadata]
     end
 
+    raise 'No entries found' if submissions.empty?
+
     submissions.map do |submission, metadata|
       @entry_parser.parse_entry(submission, metadata)
     end
