@@ -5,9 +5,10 @@ require_relative 'html_parser'
 require_relative 'http_getter'
 
 class Scraper
-  def initialize(http_getter, html_parser)
+  def initialize(http_getter, html_parser, entry_parser)
     @http_getter = http_getter
     @html_parser = html_parser
+    @entry_parser = entry_parser
   end
 
   def fetch_entries
