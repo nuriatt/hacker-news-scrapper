@@ -33,23 +33,23 @@ ruby main.rb
 bundle exec ruby test/test_hacker_news_scraper.rb
 ```
 
-## 🏗️ Design Decisions
+## 💭 Why I Built It This Way
 
-### 1. Ruby Implementation
+### Backend Approach
 
-- I chose to implement the scraper in just Ruby without a UI to focus on backend functionality
-- This aligns with my goal of growing my skills in backend development
-- Makes the codebase simpler to maintain and test
+I decided to build this project just in Ruby because it's the language I enjoy the most and the one I want to keep developing my skills in. This was a chance to focus on writing clean, well structured Ruby without relying on frameworks or a UI.
 
-### 2. Gems
+### Gems
 
-- `httparty`: User friendly HTTP client
-- `nokogiri`: Parser that makes easy to deal with XML and HTML documents
-- `json`: For handling JSON data
+- `httparty` for making HTTP requests, very user-friendly
+- `nokogiri` to handle all the HTML parsing
+- `json` for handling the data storage (keeping it simple with the standard library)
 - `minitest` and `mocha` for unit testing
 
-## 3. Testing Strategy
+### Testing Strategy
 
-- Unit tests for core functionality
-- Mock external HTTP requests to ensure reliable testing
-- Test coverage for edge cases and error handling
+- Write unit tests for all the core functionality
+- Mock external HTTP requests (so tests are fast and reliable)
+- Keep the test suite maintainable
+
+The goal was to keep everything simple and maintainable. No fancy frameworks, no complex setup - just pure Ruby 💎
